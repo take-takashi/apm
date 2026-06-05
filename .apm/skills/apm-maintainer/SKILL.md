@@ -1,6 +1,6 @@
 ---
 name: apm-maintainer
-description: Use when migrating, adding, updating, or reviewing local custom skills in this APM management repository. Applies when the user wants to bring an existing SKILL.md into .agents/skills, create a small reusable skill for personal agent distribution, or check that APM-managed skills follow repository policy.
+description: Use when migrating, adding, updating, or reviewing local custom skills in this APM management repository. Applies when the user wants to bring an existing SKILL.md into .apm/skills, create a small reusable skill for personal agent distribution, or check that APM-managed skills follow repository policy.
 ---
 
 # APM Maintainer
@@ -12,7 +12,8 @@ description: Use when migrating, adding, updating, or reviewing local custom ski
 - 回答と作業説明は日本語で行う。
 - この skill は原則として APM 管理リポジトリのルートで実行する。
 - 別リポジトリで起動した場合は、移植元の調査だけを行い、書き込み先として APM 管理リポジトリを明示確認してから作業する。
-- 自作 skill の正本は `.agents/skills/<skill-name>/SKILL.md` に置く。
+- 自作 skill の配布元は `.apm/skills/<skill-name>/SKILL.md` に置く。
+- `.agents/skills/` は APM が展開する利用先として扱い、直接編集しない。
 - skill 名とディレクトリ名は lowercase kebab-case にする。
 - 外部 repo からの取り込みは、ユーザーが明示したものだけ扱う。
 - MCP server / plugins は追加しない。hooks はユーザーの明示依頼がある場合だけ検討する。
@@ -36,14 +37,14 @@ description: Use when migrating, adding, updating, or reviewing local custom ski
    - client 固有の metadata は、必要になるまで追加しない。
 
 4. 内容を移植する。
-   - `.agents/skills/<skill-name>/SKILL.md` を作成または更新する。
+   - `.apm/skills/<skill-name>/SKILL.md` を作成または更新する。
    - 手順は具体的に書き、長い背景説明や README 的な説明を入れない。
    - 必要な `scripts/`、`references/`、`assets/` だけを同じ skill ディレクトリ配下に置く。
    - bundled resources を含める場合は、`SKILL.md` からいつ読む・使うかを明記する。
 
 5. APM 管理との整合性を確認する。
-   - `apm.yml` がある場合は、対象 skill が配布対象に含まれるか確認する。
-   - APM が配置した `.github/`、`.claude/` などのファイルは直接編集しない。
+   - `apm.yml` がある場合は、`.apm/` 配下の local content が配布対象として妥当か確認する。
+   - APM が配置した `.agents/`、`.github/`、`.claude/` などのファイルは直接編集しない。
    - `apm.lock.yaml` は手編集しない。
 
 6. 検証する。

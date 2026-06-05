@@ -10,18 +10,23 @@
 
 ## APM 運用
 
-- 自作 skill の正本は `.agents/skills/<skill-name>/SKILL.md` に置く。
+- 自作 skill の配布元は `.apm/skills/<skill-name>/SKILL.md` に置く。
+- `.agents/skills/` は APM が展開する利用先として扱い、直接編集しない。
 - skill 名とディレクトリ名は小文字 kebab-case を使う。
 - `apm.yml` は依存関係と配布設定の宣言として扱う。
+- `mise.toml` は APM CLI など、このリポジトリを作業するための toolchain 定義として git 管理する。
+- `mise.toml` は APM の配布対象ではないため、skills / instructions の配布内容を表現しない。
 - `apm.lock.yaml` は APM が生成・更新する lockfile として扱い、手編集しない。
-- 通常確認では `apm install --frozen` を使い、manifest と lockfile のずれを検出する。
+- 通常確認では `apm lock`、`apm audit --ci`、`apm pack --dry-run --verbose` を使い、manifest、lockfile、配布 bundle の整合性を確認する。
+- このリポジトリ自身では、root の `AGENTS.md` を APM 配布対象にしないため、`codex` target への install 検証を通常確認に含めない。
 - セキュリティ確認では `apm audit --ci` を使う。
 - 依存更新が必要な場合だけ、`apm install --update` または `apm deps update` を使う。
 - `apm_modules/` はキャッシュなので編集・コミットしない。
 
 ## APM 管理ファイル
 
-- `.github/`、`.claude/` などに APM が配置したファイルは、直接編集せず、元の skill / package / `apm.yml` を直して `apm install` で反映する。
+- ルートの `AGENTS.md` はこのリポジトリで作業するエージェント向けの指示書であり、APM の配布対象にしない。
+- `.agents/`、`.github/`、`.claude/` などに APM が配置したファイルは、直接編集せず、元の `.apm/` content / package / `apm.yml` を直して `apm install` で反映する。
 - どのファイルが APM 管理下か迷ったら、`apm.lock.yaml` の `deployed_files` を確認する。
 - `apm.lock.yaml` の差分では、`repo_url`、`resolved_ref`、`resolved_commit`、`content_hash`、`deployed_files` を重点確認する。
 
@@ -46,6 +51,6 @@
 
 ## 変更時の確認
 
-- APM 関連ファイルを変更したら、可能な範囲で `apm install --frozen` と `apm audit --ci` を実行する。
+- APM 関連ファイルを変更したら、可能な範囲で `apm lock`、`apm audit --ci`、`apm pack --dry-run --verbose` を実行する。
 - APM が未インストール、または現時点で `apm.yml` / `apm.lock.yaml` が無い場合は、その前提を完了報告に書く。
 - 外部依存更新を含む変更は、lockfile の差分確認が終わるまで完了扱いにしない。
