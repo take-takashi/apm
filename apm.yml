@@ -16,4 +16,5 @@ dependencies:
   - mattpocock/skills/skills/productivity/grill-me#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
   mcp: []
 includes: auto
-scripts: {}
+scripts:
+  install-codex-global: apm install --frozen && apm compile --target codex --root ~/.codex
