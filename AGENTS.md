@@ -12,6 +12,8 @@
 
 - 配布用 instruction の配布元は `.apm/instructions/*.instructions.md` に置く。
 - 配布用 `AGENTS.md` は `apm compile` で生成し、手編集しない。
+- Codex `config.toml` の共通設定は `codex/config.managed.toml` に置き、`scripts/install-codex-global.sh` で managed block だけを反映する。
+- Codex agent 設定は `codex/agents/*.toml` に置き、`scripts/install-codex-global.sh` で `~/.codex/agents/` へ配置する。
 - 自作 skill の配布元は `.apm/skills/<skill-name>/SKILL.md` に置く。
 - `.agents/skills/` は APM が展開する利用先として扱い、直接編集しない。
 - skill 名とディレクトリ名は小文字 kebab-case を使う。

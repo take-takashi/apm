@@ -17,4 +17,4 @@ dependencies:
   mcp: []
 includes: auto
 scripts:
-  install-codex-global: apm install --frozen && apm compile --target codex --root ~/.codex
+  install-codex-global: scripts/install-codex-global.sh
