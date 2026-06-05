@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Cleanup Main"
+  short_description: "作業worktree整理とmain更新まで実行します"
+  default_prompt: "git-cleanup-main を実行して、マージ済み worktree とブランチを片付け、main を pull してください。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AGENTS.md作成"
+  short_description: "リポジトリ固有のAGENTS.md指示書を作成"
+  default_prompt: "Use $create-agents-md to create a concise repository-specific AGENTS.md from existing docs, config files, and code structure."

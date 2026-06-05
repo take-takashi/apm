@@ -1,0 +1,4 @@
+interface:
+  display_name: "GH Merge PR"
+  short_description: "コミットからPR作成とmainマージまで実行します"
+  default_prompt: "gh-merge-pr を実行して、現在の変更をコミット、push、PR作成、コンフリクトがなければ main にマージしてください。"

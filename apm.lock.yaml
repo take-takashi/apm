@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-06-05T14:23:32.620245+00:00'
+generated_at: '2026-06-05T14:38:43.110704+00:00'
 apm_version: 0.18.0
 dependencies:
 - repo_url: mattpocock/skills
@@ -84,3 +84,9 @@ dependencies:
   content_hash: sha256:784f0dbb7403b0f00324bce9a112f715342777a0daee7bbb7385f9c6f0a170ea
 local_deployed_files:
 - .agents/skills/apm-maintainer
+- .agents/skills/commit-conventional-ja
+- .agents/skills/create-agents-md
+- .agents/skills/gh-merge-pr
+- .agents/skills/git-cleanup-main
+- .agents/skills/go-tdd-implementation
+- .agents/skills/python-tdd-implementation
