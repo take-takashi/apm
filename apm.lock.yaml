@@ -1,4 +1,86 @@
 lockfile_version: '1'
-generated_at: '2026-06-04T13:38:19.014627+00:00'
+generated_at: '2026-06-05T12:08:41.680111+00:00'
 apm_version: 0.17.0
-dependencies: []
+dependencies:
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/diagnose
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/diagnose
+  content_hash: sha256:eacaa3d6c8bfcf4c051fc1c12cb5c43f3549ccb1d447aa8b263abdc5b1eaceb5
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/grill-with-docs
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/grill-with-docs
+  content_hash: sha256:eb0e91e84277283dc2b23ed544399e53afd6b5287e5b6929f25fe8aa608e164b
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/tdd
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/tdd
+  content_hash: sha256:e63cb1d7d5f6d90ad03f811299d40cc8e52c3d4bdaafd058ce2585ca249c234c
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/to-issues
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/to-issues
+  content_hash: sha256:47f648f3414848ccfc62cb41d2828b7e575fb5e7cbd6c4bdf630c063b5dc5e82
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/to-prd
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/to-prd
+  content_hash: sha256:a6d6d475f1d01c201937fa0c306e55b7056b02023ad615bc92f57514e831dd31
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/triage
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/triage
+  content_hash: sha256:2b6efb6da12d92551772fcc04acf331f4e0e6f7bd9d4cb23ce0b301e0b128feb
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/engineering/zoom-out
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/zoom-out
+  content_hash: sha256:8357aeaece3b709c442eab67e64b86844e05e2f1ea95b109565eba50b6def36e
+- repo_url: mattpocock/skills
+  host: github.com
+  resolved_commit: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  resolved_ref: aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  virtual_path: skills/productivity/grill-me
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/grill-me
+  content_hash: sha256:784f0dbb7403b0f00324bce9a112f715342777a0daee7bbb7385f9c6f0a170ea
+local_deployed_files:
+- .agents/skills/apm-maintainer

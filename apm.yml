@@ -2,13 +2,18 @@ name: apm
 version: 1.0.0
 description: APM project for apm
 author: TAKE Takashi
-# Which agent platforms to deploy to.
-# Resolution order: --target flag > this field > auto-detect from filesystem.
-# Accepted values: copilot, claude, cursor, opencode, codex, gemini, windsurf, agent-skills, all
 targets:
 - agent-skills
 dependencies:
-  apm: []
+  apm:
+  - mattpocock/skills/skills/engineering/grill-with-docs#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/engineering/diagnose#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/engineering/tdd#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/engineering/zoom-out#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/engineering/to-issues#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/engineering/to-prd#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/engineering/triage#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
+  - mattpocock/skills/skills/productivity/grill-me#aaf2453fbdfe7a15c07f11d861224f34ab4b53cb
   mcp: []
 includes: auto
 scripts: {}
