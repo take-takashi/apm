@@ -35,15 +35,9 @@ description = "本番障害視点で信頼性リスクを探す専門エージ�
 config_file = "agents/reliability.toml"
 
 [tui]
-status_line = [
-    "model-with-reasoning",
-    "context-remaining",
-    "current-dir",
-    "project-root",
-    "git-branch",
-    "five-hour-limit",
-]
+status_line = ["model-with-reasoning", "context-remaining", "five-hour-limit", "branch-changes", "approval-mode", "task-progress"]
 theme = "catppuccin-frappe"
+status_line_use_colors = true
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
