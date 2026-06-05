@@ -1,2 +1,6 @@
 [tools]
-"github:microsoft/apm" = "v0.17.0"
+"github:microsoft/apm" = "v0.18.0"
+
+[tasks.install-codex-global]
+description = "Codexグローバル設定へAPM管理のskills、AGENTS.md、config.toml共通設定、agent設定を反映する"
+run = "apm run install-codex-global"
