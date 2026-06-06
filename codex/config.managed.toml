@@ -53,13 +53,4 @@ enabled = true
 
 [plugins."browser-use@openai-bundled"]
 enabled = true
-
-[plugins."documents@openai-primary-runtime"]
-enabled = true
-
-[plugins."spreadsheets@openai-primary-runtime"]
-enabled = true
-
-[plugins."presentations@openai-primary-runtime"]
-enabled = true
 # END codex-config managed: common
