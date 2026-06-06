@@ -3,7 +3,7 @@ model = "gpt-5.5"
 model_reasoning_effort = "medium"
 web_search = "live"
 
-notify = ['bash', '-lc', 'if [ -f /.dockerenv ] || [ -f /run/.containerenv ] || [ -n "${CODESPACES:-}" ] || [ -n "${DEVCONTAINER:-}" ]; then printf "\a"; elif command -v afplay >/dev/null 2>&1; then afplay /System/Library/Sounds/Ping.aiff; elif command -v paplay >/dev/null 2>&1; then paplay /usr/share/sounds/freedesktop/stereo/complete.oga; else printf "\a"; fi']
+notify = ['bash', '-lc', 'if [ -f /.dockerenv ] || [ -f /run/.containerenv ] || [ -n "${CODESPACES:-}" ] || [ -n "${DEVCONTAINER:-}" ]; then printf "\a"; elif command -v afplay >/dev/null 2>&1; then afplay /System/Library/Sounds/Submarine.aiff; elif command -v paplay >/dev/null 2>&1; then paplay /usr/share/sounds/freedesktop/stereo/complete.oga; else printf "\a"; fi']
 
 # full-auto mode
 approval_policy = "on-request"
